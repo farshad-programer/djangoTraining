@@ -1,4 +1,4 @@
-from rest_framework import viewsets
+from rest_framework import permissions, viewsets ,status
 
 from .models import Post
 from .serializers import postSerializer
@@ -9,4 +9,6 @@ from .serializers import postSerializer
 class PostView(viewsets.ModelViewSet):
     queryset = Post.objects.all()
     serializer_class = postSerializer
-
+    
+    # permission_classes = [permissions.IsAuthenticated]
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
