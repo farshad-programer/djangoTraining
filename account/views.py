@@ -1,4 +1,4 @@
-from rest_framework import generics
+from rest_framework import viewsets
 
 from .models import Post
 from .serializers import postSerializer
@@ -6,14 +6,7 @@ from .serializers import postSerializer
 # Create your views here.
 
 
-class PostListView(generics.ListCreateAPIView):
+class PostView(viewsets.ModelViewSet):
     queryset = Post.objects.all()
     serializer_class = postSerializer
 
-
-# CRUD --create , retrieve ,
-class PostDetailView(
-    generics.RetrieveUpdateDestroyAPIView,
-):
-    queryset = Post.objects.all()
-    serializer_class = postSerializer
