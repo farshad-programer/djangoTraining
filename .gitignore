@@ -1,0 +1,33 @@
+# Python فایل‌های
+*.pyc
+__pycache__/
+
+# محیط مجازی (Virtual Environment)
+venv/
+env/
+
+# PyCharm فایل‌های تنظیمات
+.idea/
+
+# VSCode فایل‌های تنظیمات
+.vscode/
+
+# Django فایل‌های پیکربندی محلی
+
+*.env
+
+# دیتابیس محلی
+db.sqlite3
+
+# Static و media فایل‌های
+/static/
+/media/
+
+# فایل‌های لاگ
+*.log
+*.pot
+
+# فایل‌های محلی
+*.swp
+*.swo
+*~
